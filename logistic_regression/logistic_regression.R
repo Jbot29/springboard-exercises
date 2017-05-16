@@ -119,3 +119,19 @@ coef(summary(ever_worked.out))
 
 plot(allEffects(ever_worked.out))
 
+##   2. Predict the probability of working for each level of marital
+##      status.
+
+#update model just to match r_maritl
+ever_worked.out <- glm(everwrk~r_maritl,
+                       data=NH11, family="binomial")
+
+# Create a dataset with predictors set at desired levels
+predDatWorked <- with(NH11,
+                expand.grid(r_maritl = unique(NH11$r_maritl)))
+
+# predict hypertension at those levels
+cbind(predDatWorked, predict(ever_worked.out, type = "response",
+                       se.fit = TRUE, interval="confidence",
+                       newdata = predDatWorked))
+
