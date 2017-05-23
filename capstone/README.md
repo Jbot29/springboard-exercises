@@ -1,6 +1,6 @@
 # Springboard Capstone
 
-## The Problem: Understand what affects my personal health and try to improve it.
+## The Problem: Understand the factors that affect my personal health inorder to improve it.
 
 After a long time of traveling, poor diet, and little exercise, I was not the picture of health. Not only did I want to improve my health but understand the factors in doing so. The more we learn about health and human biology, it seems the factors that affect people are somewhat unique. 
 
