@@ -18,7 +18,7 @@ ggplot(data=hrv_data, aes(x=Date, y=HRV,group=1)) +     geom_line()
 ggplot(hrv_data, aes(x=Sleep.m., y=HRV)) +
      geom_point(shape=1) 
 
-ggplot(hrv_data, aes(x=Low.Carb, y=HRV)) +
+ggplot(hrv_data, aes(x=Date, y=HRV)) +
       geom_point(shape=1) +  geom_smooth(method=lm) 
 
 
@@ -26,7 +26,6 @@ getmode <- function(v) {
   uniqv <- unique(v)
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
-
 
 getmode(hrv_data$HRV)
 #mean,median
