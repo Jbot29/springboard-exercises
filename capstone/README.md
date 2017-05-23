@@ -27,6 +27,17 @@ There have also been studies done showing relationships in particular groups lin
 
 So for over 50 days, I recorded not only my morning HRV recording but a bunch of other factors to find out what if anything moves the needle on my HRV. The basic principle was not to add in too many new factors at once.
 
+## Equipment
+
+For HRV:
+
+Polar H7 Bluetooth heart rate sensor.
+Elite-HRV App.
+
+For sleep:
+
+Fitbit Charge2
+
 Plot of HRV
 
 ![HRV](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_date.png)
