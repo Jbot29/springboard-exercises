@@ -1,6 +1,6 @@
 # Springboard Capstone
 
-## The Problem: Understand the factors that affect my personal health inorder to improve it.
+## The Problem: Understand the factors that affect my personal health in order to improve it.
 
 After a long time of traveling, poor diet, and little exercise, I was not the picture of health. Not only did I want to improve my health but understand the factors in doing so. The more we learn about health and human biology, it seems the factors that affect people are somewhat unique. 
 
@@ -44,12 +44,41 @@ Fitbit Charge2
 
 ![HRV](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_date.png)
 
+So what are we looking for in HRV? Elite-HRV takes a few days to generate a baseline and then can give recommendations on training activity. It adjusts as you go. 
 
-## Hrv Moving Average
+So for me, anything below 55 means training is off for the day. Anything above is a green light. You can go too high, but that is rare and only happened once during the recording. 
+
+So the goal was to improve on average my daily HRV scores and to see if I can raise it. 
+
+The moving average shows a slight uptick in the average.
 
 ![Moving Average](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_moving_average.png)
 
 
-## HRV and date with linear model
+Graphing HRV to days and fitting a line to it also shows an upward trend.
 
 ![Plot with lm](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_data_lm.png)
+
+
+Both the median and the mean were above 55 and 60.00 and 59.33 respectively by the end. Not as drastic as I would have liked but an improvement. 
+
+Also, my mean is close to what Elite-HRV has observed for my age range out of 8,873 males.
+
+https://elitehrv.com/normal-heart-rate-variability-age-gender
+
+So goal one was accomplished, now to look into what factors play a role in my daily HRV score.
+
+
+## Sleep
+
+Using the Fitbit, I recorded the number of minutes slept every night.
+
+![sleep](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_sleep.png)
+
+There is a cluster, where above the 400 minute that seems to correlate with a good HRV. Although, it doesn't appear to be a linear predictor of HRV as there is a wide range of outcomes for the same amount of sleep.
+
+Now there is more to sleep than just time; there is also sleep quality.
+The latest version of the Fitbit app now has a breakdown of the different sleep phases, but this update came late in my recording so didn't have the breakdowns for the entire time.  I looked at the amount of deep sleep compared to HRV after the update, but it suffers from the same problem that just minutes have. 
+
+Sleep is important, but as of yet, I do not know if there is a good linear predictor.
+
