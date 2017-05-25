@@ -48,7 +48,7 @@ So what are we looking for in HRV?
 
 Elite-HRV takes a few days to generate a baseline and then can give recommendations on training activity. It adjusts as you go. 
 
-So for me, anything below 55 means training is off for the day. Anything above is a green light. You can go too high, but that is rare and only happened once during the recording. 
+So for me, anything below 55 means training is off for the day. Anything above is basically a green light. You can go too high, but that is rare.
 
 So the goal was to improve on average my daily HRV scores and to see if I can raise it. 
 
