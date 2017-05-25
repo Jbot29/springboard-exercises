@@ -25,7 +25,7 @@ There have also been studies done showing relationships in particular groups lin
 
 ## Method
 
-So for over 50 days, I recorded not only my morning HRV but a bunch of other factors to find out what if anything moves the needle on my HRV. The basic principle was not to add in too many new factors at once.
+So for 50 days, I recorded not only my morning HRV but a bunch of other factors to find out what if anything moves the needle on my HRV. The basic principle was not to add in too many new factors at once.
 
 ## Equipment
 
@@ -99,7 +99,7 @@ I recorded caffeine servings per day, but the amount didn't vary too much. Becau
 
 ## Final model
 
-Going through the factors, I attempted to find the best linear regression model. Here are the results and the factors that seem to have some significance.
+Going through the factors, I attempted to find the best linear regression model I could. Here are the results and the factors that seem to have some significance.
 
 ```
 lm(formula = hrv_result ~ Drink * Green.Smoothie + Blackout + 
@@ -126,4 +126,31 @@ Multiple R-squared:  0.5772,	Adjusted R-squared:  0.5269
 F-statistic: 11.47 on 5 and 42 DF,  p-value: 5.113e-07
 ```
 
+## A night out.
+
+Not that this comes as a shock, but a night out really is not great, and it has the strongest significance out all the things measured.
+
+I also ran a separate t-test against a random subset of non-drinking days, and that also shows with 95% confidence that the means are different. 
+
+
+## Green Smoothie
+
+I wanted to look into the role nutrition played in HRV, but it is tough to measure. So I started with just adding a green smoothie to my diet. The same exact one each time to make it easy to quantify. Initially, I saw a spike upwards, but it didn't hold. As the model shows, it is not significant on its own. 
+
+What is interesting is that days that I drank a green smoothie and went out drinking, that my HRV was slightly improved. I don't have too many data points on this, but maybe a green smoothie is a potential hangover cure.
+
+## Exercise (MT)
+
+For exercise, I added in one hour sessions of Muay Thai once or twice a week. The model shows that this has an effect on HR, in fact, a negative relationship, which makes sense. In the morning I am sore and still recovering, so there should be a drop in my HRV.
+
+## Near complete dark bedroom (Blackout)
+
+Light, especially blue light can affect the sleep cycles in humans. This is why we have an app like Flux, and now Apple has added Night Shift. 
+
+I wanted to test this as well, by blackout the windows in my bedroom. It is now nearly pitch black. 
+
+A t-test of times between blackout days and non, do not show any significance between the minutes slept but the model does show an improvement in HRV. 
+
+
+[Source](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000145)
 
