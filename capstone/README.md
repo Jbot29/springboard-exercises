@@ -39,7 +39,7 @@ For sleep:
 
 Fitbit Charge2
 
-## Plot of HRV.
+## My HRV over the 50 days.
 
 
 ![HRV](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_date.png)
@@ -49,6 +49,8 @@ So what are we looking for in HRV? Elite-HRV takes a few days to generate a base
 So for me, anything below 55 means training is off for the day. Anything above is a green light. You can go too high, but that is rare and only happened once during the recording. 
 
 So the goal was to improve on average my daily HRV scores and to see if I can raise it. 
+
+So how did I do.
 
 The moving average shows a slight uptick in the average.
 
@@ -68,6 +70,7 @@ https://elitehrv.com/normal-heart-rate-variability-age-gender
 
 So goal one was accomplished, now to look into what factors play a role in my daily HRV score.
 
+Lets start with some factors that I thought would be good predictors but turned out not to be.
 
 ## Sleep
 
@@ -75,10 +78,52 @@ Using the Fitbit, I recorded the number of minutes slept every night.
 
 ![sleep](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_sleep.png)
 
-There is a cluster, where above the 400 minute that seems to correlate with a good HRV. Although, it doesn't appear to be a linear predictor of HRV as there is a wide range of outcomes for the same amount of sleep.
+There is a cluster, where above the 400 minute mark that seems to correlate with a good HRV. Although, it doesn't appear to be a linear predictor of HRV as there is a wide range of outcomes for the same amount of sleep.
 
 Now there is more to sleep than just time; there is also sleep quality.
 The latest version of the Fitbit app now has a breakdown of the different sleep phases, but this update came late in my recording so didn't have the breakdowns for the entire time.  I looked at the amount of deep sleep compared to HRV after the update, but it suffers from the same problem that just minutes have. 
 
-Sleep is important, but as of yet, I do not know if there is a good linear predictor.
+Sleep is important, but as of yet, I do not know of a good linear predictor within sleep. So in my final model it is not included.
+
+
+## Pollen Count
+
+Allergy season is endless in Texas, and it usually affects me, but over 50 days there seems to be no correlation at all. It could also be not the right allergen currently, so may revisit this.
+
+![pollen](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_pollen.png)
+
+
+## Caffeine servings
+
+I recorded caffeine servings per day, but the amount didn't vary too much. Because of this and/or because caffeine isn't a significant factor, it didn't prove useful in the final model.
+
+## Final model
+
+Going through the factors, I attempted to find the best linear regression model. Here are the results and the factors that seem to have some significance.
+
+```
+lm(formula = hrv_result ~ Drink * Green.Smoothie + Blackout + 
+    MT, data = hrv_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8.9330 -2.0791 -0.1164  2.6388 10.4432 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            62.506      1.097  56.968  < 2e-16 ***
+Drink                 -10.573      1.562  -6.767 3.13e-08 ***
+Green.Smoothie         -0.403      1.498  -0.269  0.78922    
+Blackout                3.624      1.472   2.461  0.01804 *  
+MT                     -3.656      1.592  -2.296  0.02675 *  
+Drink:Green.Smoothie    9.470      3.477   2.724  0.00936 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.101 on 42 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.5772,	Adjusted R-squared:  0.5269 
+F-statistic: 11.47 on 5 and 42 DF,  p-value: 5.113e-07
+```
+
 
