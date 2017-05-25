@@ -26,8 +26,6 @@ ggplot(data=hrv_data, aes(x=Date, y=HRV,group=1)) +     geom_line()
 ggplot(hrv_data, aes(x=Date, y=HRV)) +
       geom_point(shape=1) +  geom_smooth(method=lm) 
 
-
-
 #look into sleep
 ggplot(hrv_data, aes(x=Sleep.m., y=HRV)) +
   geom_point(shape=1) 
@@ -77,13 +75,10 @@ summary(hrv.mod)
 
 #t-test for drinking against random non-drinking
 drink <- subset(hrv_data, Drink == 1)
-
 no_drink_random <- sample_n(subset(hrv_data, Drink == 0),nrow(drink))
-
 t.test(drink$hrv_result, no_drink_random$hrv_result) 
 
 #test difference in number of sleep minutes between blackout and non blackout days.
 blackout_days <- subset(hrv_data, Blackout == 1)
 non_blackout_days <- sample_n(subset(hrv_data, Blackout == 0),nrow(blackout_days))
-
 t.test(non_blackout_days$Sleep.m., blackout_days$Sleep.m.) 

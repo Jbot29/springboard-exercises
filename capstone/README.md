@@ -66,7 +66,7 @@ Both the median and the mean were above 55 and 60.00 and 59.33 respectively by t
 
 Also, my mean is close to what Elite-HRV has observed for my age range out of 8,873 males.
 
-https://elitehrv.com/normal-heart-rate-variability-age-gender
+[Elite-HRV](https://elitehrv.com/normal-heart-rate-variability-age-gender)
 
 So goal one was accomplished, now to look into what factors play a role in my daily HRV score.
 
@@ -130,7 +130,7 @@ F-statistic: 11.47 on 5 and 42 DF,  p-value: 5.113e-07
 
 Not that this comes as a shock, but a night out really is not great, and it has the strongest significance out all the things measured.
 
-I also ran a separate t-test against a random subset of non-drinking days, and that also shows with 95% confidence that the means are different. 
+I also ran a separate t-test against a random subset of non-drinking days, and that also shows with 95% confidence that the two popluation means are different, meaning that highly likely drinking affects HRV.
 
 
 ## Green Smoothie
@@ -147,10 +147,17 @@ For exercise, I added in one hour sessions of Muay Thai once or twice a week. Th
 
 Light, especially blue light can affect the sleep cycles in humans. This is why we have an app like Flux, and now Apple has added Night Shift. 
 
-I wanted to test this as well, by blackout the windows in my bedroom. It is now nearly pitch black. 
+I wanted to test this as well, by blacking out the windows in my bedroom. It is now nearly pitch black. 
 
 A t-test of times between blackout days and non, do not show any significance between the minutes slept but the model does show an improvement in HRV. 
 
 
 [Source](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1000145)
+
+## Conclusion
+
+Before I started this project, I was worried that I wouldn't be able to find any impressive results, but overall I am happy with the outcome.
+
+I was able to improve my health as measured by HRV and find some of the factors affecting it. It has given me an excellent base in which to dive deeper and to explore more into what affects my day to day health.
+ 
 
