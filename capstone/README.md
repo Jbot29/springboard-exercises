@@ -44,7 +44,9 @@ Fitbit Charge2
 
 ![HRV](https://github.com/Jbot29/springboard-exercises/blob/master/capstone/hrv_date.png)
 
-So what are we looking for in HRV? Elite-HRV takes a few days to generate a baseline and then can give recommendations on training activity. It adjusts as you go. 
+So what are we looking for in HRV?
+
+Elite-HRV takes a few days to generate a baseline and then can give recommendations on training activity. It adjusts as you go. 
 
 So for me, anything below 55 means training is off for the day. Anything above is a green light. You can go too high, but that is rare and only happened once during the recording. 
 
