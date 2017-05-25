@@ -132,7 +132,7 @@ F-statistic: 11.47 on 5 and 42 DF,  p-value: 5.113e-07
 
 Not that this comes as a shock, but a night out really is not great, and it has the strongest significance out all the things measured.
 
-I also ran a separate t-test against a random subset of non-drinking days, and that also shows with 95% confidence that the two popluation means are different, meaning that highly likely drinking affects HRV.
+I also ran a separate t-test against a random subset of non-drinking days, and that also shows with 95% confidence that the two popluation means are different, meaning that it is highly likely drinking affects HRV.
 
 
 ## Green Smoothie
