@@ -52,7 +52,7 @@ So for me, anything below 55 means training is off for the day. Anything above i
 
 So the goal was to improve on average my daily HRV scores and to see if I can raise it. 
 
-So how did I do.
+So how did I do?
 
 The moving average shows a slight uptick in the average.
 
